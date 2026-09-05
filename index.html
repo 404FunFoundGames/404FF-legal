@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &amp; Health Warning</title>
+<style>
+:root{
+  --bg:#f7f7f5; --card:#fff; --fg:#1b1b19; --muted:#61615c;
+  --line:#e2e2dd; --accent:#3b5bdb; --warn-bg:#fff4e6; --warn-line:#f0a04b; --warn-fg:#7a4406;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#14140f; --card:#1c1c18; --fg:#eceae2; --muted:#a3a29a;
+    --line:#2e2e28; --accent:#8ea3ff; --warn-bg:#2b1f10; --warn-line:#a06a2a; --warn-fg:#f0c48a;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+.wrap{max-width:780px; margin:0 auto; padding:32px 20px 80px}
+header{display:flex; flex-wrap:wrap; gap:16px; align-items:baseline; justify-content:space-between; margin-bottom:8px}
+h1{font-size:26px; margin:0; letter-spacing:-.01em}
+h2{font-size:21px; margin:44px 0 12px; letter-spacing:-.01em; scroll-margin-top:20px}
+h3{font-size:16px; margin:26px 0 6px}
+p,li{color:var(--fg)}
+p{margin:10px 0}
+ul{margin:10px 0; padding-left:22px}
+li{margin:5px 0}
+a{color:var(--accent)}
+small,.muted{color:var(--muted); font-size:13.5px}
+.card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 24px; margin-top:24px}
+.warn{background:var(--warn-bg); border:1px solid var(--warn-line); color:var(--warn-fg); border-radius:12px; padding:16px 20px; margin:18px 0}
+.warn strong{color:var(--warn-fg)}
+.langs{display:flex; gap:6px}
+.langs button{
+  font:inherit; font-size:13px; padding:5px 12px; cursor:pointer;
+  background:transparent; color:var(--muted); border:1px solid var(--line); border-radius:999px;
+}
+.langs button[aria-pressed="true"]{background:var(--fg); color:var(--bg); border-color:var(--fg)}
+nav{display:flex; gap:14px; flex-wrap:wrap; margin:14px 0 4px; font-size:14px}
+hr{border:0; border-top:1px solid var(--line); margin:36px 0}
+table{border-collapse:collapse; width:100%; font-size:14.5px; margin:12px 0}
+th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top}
+th{background:var(--bg); font-weight:600}
+.tablewrap{overflow-x:auto}
+[data-lang]{display:none}
+[data-lang].on{display:block}
+span[data-lang]{display:none}
+span[data-lang].on{display:inline}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1 data-var="game">Nazwa gry</h1>
+  <div class="langs">
+    <button type="button" data-set="pl" aria-pressed="true">Polski</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<p class="muted">
+  <span data-lang="pl">Polityka prywatności i ostrzeżenie zdrowotne &middot; ostatnia aktualizacja: <span data-var="date"></span></span>
+  <span data-lang="en">Privacy Policy and Health &amp; Safety Warning &middot; last updated: <span data-var="date"></span></span>
+</p>
+
+<nav>
+  <a href="#privacy"><span data-lang="pl">Polityka prywatności</span><span data-lang="en">Privacy Policy</span></a>
+  <a href="#health"><span data-lang="pl">Ostrzeżenie zdrowotne</span><span data-lang="en">Health &amp; Safety</span></a>
+  <a href="#contact"><span data-lang="pl">Kontakt</span><span data-lang="en">Contact</span></a>
+</nav>
+
+<hr>
+
+<!-- ================= PRIVACY ================= -->
+<h2 id="privacy">
+  <span data-lang="pl">Polityka prywatności</span>
+  <span data-lang="en">Privacy Policy</span>
+</h2>
+
+<div data-lang="pl">
+  <p>Ta polityka opisuje, jakie dane zbiera gra <span data-var="game"></span> ("gra"), po co i co możesz z tym zrobić. Administratorem danych jest <span data-var="dev"></span>, kontakt: <a data-var="mailto" href="#"><span data-var="email"></span></a>.</p>
+
+  <h3>Jakie dane zbieramy</h3>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Dane</th><th>Skąd</th><th>Po co</th></tr>
+    <tr>
+      <td>SteamID i nazwa gracza (nick ze Steam)</td>
+      <td>Steamworks, przy uruchomieniu gry</td>
+      <td>Rozpoznanie twojego zapisu w chmurze, wyświetlenie twojej nazwy w grze</td>
+    </tr>
+    <tr>
+      <td>Zapisy gry (postęp, ustawienia, statystyki)</td>
+      <td>Z twojego urządzenia</td>
+      <td>Synchronizacja postępu między komputerami</td>
+    </tr>
+    <tr>
+      <td>Dane analityczne: długość sesji, zdarzenia w grze (np. ukończone poziomy), wersja gry, system operacyjny, model karty graficznej, rozdzielczość, język, kraj</td>
+      <td>Automatycznie w trakcie gry</td>
+      <td>Sprawdzenie które fragmenty gry są za trudne albo zabugowane, dobór wymagań sprzętowych</td>
+    </tr>
+    <tr>
+      <td>Raporty o błędach: log błędu, stan gry w momencie awarii, dane sprzętowe</td>
+      <td>Automatycznie po awarii gry</td>
+      <td>Naprawianie błędów</td>
+    </tr>
+  </table>
+  </div>
+
+  <p><strong>Czego nie zbieramy:</strong> imienia i nazwiska, adresu, numeru telefonu, danych płatności, dokumentów tożsamości. Nie mamy dostępu do twoich danych płatniczych – płatność obsługuje Valve i nie widzimy numeru karty ani danych rozliczeniowych.</p>
+
+  <h3>Podstawa prawna (RODO)</h3>
+  <ul>
+    <li>Zapisy w chmurze i identyfikacja konta – wykonanie umowy, czyli dostarczenie ci działającej gry (art. 6 ust. 1 lit. b RODO).</li>
+    <li>Analityka i raporty o błędach – nasz prawnie uzasadniony interes, czyli poprawianie stabilności i jakości gry (art. 6 ust. 1 lit. f RODO). Możesz zgłosić sprzeciw, patrz niżej.</li>
+  </ul>
+
+  <h3>Komu przekazujemy dane</h3>
+  <ul>
+    <li><strong>Valve Corporation</strong> – platforma Steam, w tym Steam Cloud. Polityka: <a href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noopener">store.steampowered.com/privacy_agreement</a></li>
+    <li><strong><span data-var="analytics"></span></strong> – dostawca analityki i raportów o błędach, przetwarza dane na nasze zlecenie.</li>
+  </ul>
+  <p>Nie sprzedajemy danych i nie przekazujemy ich reklamodawcom. Część dostawców ma serwery poza Europejskim Obszarem Gospodarczym – transfer odbywa się na podstawie standardowych klauzul umownych Komisji Europejskiej.</p>
+
+  <h3>Jak długo trzymamy dane</h3>
+  <ul>
+    <li>Zapisy w chmurze – dopóki masz grę w bibliotece Steam albo dopóki ich nie skasujesz.</li>
+    <li>Dane analityczne – do 24 miesięcy, potem są usuwane albo anonimizowane.</li>
+    <li>Raporty o błędach – do 12 miesięcy.</li>
+  </ul>
+
+  <h3>Twoje prawa</h3>
+  <p>Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz do sprzeciwu wobec przetwarzania opartego na uzasadnionym interesie. Napisz na <a data-var="mailto" href="#"><span data-var="email"></span></a> i podaj swój SteamID, żebyśmy mogli znaleźć twoje dane. Odpowiadamy w ciągu 30 dni. Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (uodo.gov.pl).</p>
+
+  <h3>Dzieci</h3>
+  <p>Gra nie jest kierowana do dzieci poniżej 13 roku życia i świadomie nie zbieramy ich danych. Jeśli jesteś rodzicem i uważasz, że twoje dziecko przekazało nam dane, napisz do nas – usuniemy je.</p>
+
+  <h3>Zmiany</h3>
+  <p>Jeśli zmienimy tę politykę, zaktualizujemy datę na górze strony. O istotnych zmianach poinformujemy w aktualizacjach gry na Steam.</p>
+</div>
+
+<div data-lang="en">
+  <p>This policy explains what data the game <span data-var="game"></span> ("the game") collects, why, and what you can do about it. The data controller is <span data-var="dev"></span>, contact: <a data-var="mailto" href="#"><span data-var="email"></span></a>.</p>
+
+  <h3>What we collect</h3>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Data</th><th>Source</th><th>Purpose</th></tr>
+    <tr>
+      <td>SteamID and Steam persona name</td>
+      <td>Steamworks, on game launch</td>
+      <td>Identifying your cloud save, showing your name in game</td>
+    </tr>
+    <tr>
+      <td>Save data (progress, settings, statistics)</td>
+      <td>From your device</td>
+      <td>Syncing progress between computers</td>
+    </tr>
+    <tr>
+      <td>Analytics: session length, in-game events (such as completed levels), game version, operating system, GPU model, resolution, language, country</td>
+      <td>Automatically during play</td>
+      <td>Finding out which parts of the game are too hard or broken, setting system requirements</td>
+    </tr>
+    <tr>
+      <td>Crash reports: error log, game state at the time of the crash, hardware info</td>
+      <td>Automatically after a crash</td>
+      <td>Fixing bugs</td>
+    </tr>
+  </table>
+  </div>
+
+  <p><strong>What we do not collect:</strong> your real name, address, phone number, payment details or identity documents. Payments are handled by Valve - we never see your card number or billing information.</p>
+
+  <h3>Legal basis (GDPR)</h3>
+  <ul>
+    <li>Cloud saves and account identification - performance of a contract, meaning delivering a working game to you (Art. 6(1)(b) GDPR).</li>
+    <li>Analytics and crash reports - our legitimate interest in improving the stability and quality of the game (Art. 6(1)(f) GDPR). You can object, see below.</li>
+  </ul>
+
+  <h3>Who we share with</h3>
+  <ul>
+    <li><strong>Valve Corporation</strong> - the Steam platform, including Steam Cloud. Policy: <a href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noopener">store.steampowered.com/privacy_agreement</a></li>
+    <li><strong><span data-var="analytics"></span></strong> - our analytics and crash reporting provider, processing data on our behalf.</li>
+  </ul>
+  <p>We do not sell data and we do not pass it to advertisers. Some providers host data outside the European Economic Area - those transfers rely on the European Commission's Standard Contractual Clauses.</p>
+
+  <h3>How long we keep data</h3>
+  <ul>
+    <li>Cloud saves - as long as you own the game on Steam, or until you delete them.</li>
+    <li>Analytics - up to 24 months, then deleted or anonymised.</li>
+    <li>Crash reports - up to 12 months.</li>
+  </ul>
+
+  <h3>Your rights</h3>
+  <p>You have the right to access, correct, delete, restrict, and port your data, and to object to processing based on legitimate interest. Email <a data-var="mailto" href="#"><span data-var="email"></span></a> with your SteamID so we can find your records. We reply within 30 days. You can also complain to your local data protection authority.</p>
+
+  <h3>Children</h3>
+  <p>The game is not directed at children under 13 and we do not knowingly collect their data. If you are a parent and believe your child sent us data, email us and we will delete it.</p>
+
+  <h3>Changes</h3>
+  <p>If we change this policy we will update the date at the top of this page, and announce anything significant in the game's Steam updates.</p>
+</div>
+
+<hr>
+
+<!-- ================= HEALTH ================= -->
+<h2 id="health">
+  <span data-lang="pl">Ostrzeżenie zdrowotne</span>
+  <span data-lang="en">Health &amp; Safety Warning</span>
+</h2>
+
+<div data-lang="pl">
+  <div class="warn">
+    <p><strong>Padaczka fotogenna.</strong> U niewielkiej części osób migające światła, kontrastowe wzory albo szybkie zmiany obrazu mogą wywołać atak padaczki, nawet jeśli nigdy wcześniej nie miały takich objawów. <strong>Przerwij grę i skontaktuj się z lekarzem</strong>, jeśli podczas grania pojawią się: zawroty głowy, zaburzenia widzenia, drganie oka lub mięśni twarzy, drgawki, dezorientacja, utrata świadomości.</p>
+  </div>
+
+  <p>Jeśli u ciebie lub w twojej rodzinie występowała padaczka, skonsultuj się z lekarzem zanim zaczniesz grać.</p>
+
+  <h3>Ogólne zasady</h3>
+  <ul>
+    <li>Rób przerwę około 10–15 minut na każdą godzinę gry.</li>
+    <li>Graj w dobrze oświetlonym pomieszczeniu, w wygodnej odległości od ekranu.</li>
+    <li>Nie graj, gdy jesteś zmęczony albo niewyspany.</li>
+    <li>Przerwij grę, jeśli poczujesz zmęczenie oczu, ból głowy albo mdłości.</li>
+  </ul>
+
+  <h3>Ból nadgarstków, dłoni i ramion</h3>
+  <p>Długie granie może powodować ból i drętwienie dłoni, nadgarstków i ramion. Jeśli to się pojawi, przerwij granie. Jeśli objawy się utrzymują albo wracają, idź do lekarza.</p>
+
+  <h3>Słuch</h3>
+  <p>Długa gra na słuchawkach przy wysokiej głośności może trwale uszkodzić słuch. Ustaw głośność na poziomie, przy którym słyszysz otoczenie.</p>
+
+  <h3>Dyskomfort ruchowy</h3>
+  <p>Gra pokazuje ruch z perspektywy pierwszej osoby, co u części osób wywołuje objawy podobne do choroby lokomocyjnej: mdłości, zawroty głowy, poty. Jeśli tak się stanie, przerwij grę. W ustawieniach możesz zmniejszyć ruch kamery, wyłączyć jej potrząsanie i zawęzić pole widzenia.</p>
+
+  <h3>Dostępność</h3>
+  <p>W ustawieniach dostępności znajdziesz opcje ograniczające migotanie i intensywne efekty wizualne. Warto je włączyć, jeśli jesteś wrażliwy na takie bodźce.</p>
+</div>
+
+<div data-lang="en">
+  <div class="warn">
+    <p><strong>Photosensitive seizures.</strong> A small number of people may experience a seizure triggered by flashing lights, high-contrast patterns or rapid image changes, even with no prior history. <strong>Stop playing and see a doctor</strong> if you experience any of these while playing: dizziness, altered vision, eye or facial twitching, convulsions, disorientation, loss of awareness.</p>
+  </div>
+
+  <p>If you or anyone in your family has a history of seizures or epilepsy, talk to a doctor before playing.</p>
+
+  <h3>General guidance</h3>
+  <ul>
+    <li>Take a 10-15 minute break for every hour of play.</li>
+    <li>Play in a well-lit room, at a comfortable distance from the screen.</li>
+    <li>Do not play when you are tired or short on sleep.</li>
+    <li>Stop playing if you feel eye strain, headache or nausea.</li>
+  </ul>
+
+  <h3>Wrist, hand and arm pain</h3>
+  <p>Long play sessions can cause pain or numbness in your hands, wrists and arms. Stop playing if this happens. If symptoms persist or come back, see a doctor.</p>
+
+  <h3>Hearing</h3>
+  <p>Long sessions with headphones at high volume can cause permanent hearing damage. Keep the volume at a level where you can still hear your surroundings.</p>
+
+  <h3>Motion discomfort</h3>
+  <p>The game uses a first-person camera, which can cause motion-sickness-like symptoms in some players: nausea, dizziness, sweating. Stop playing if that happens. The settings menu lets you reduce camera motion, turn off camera shake and narrow the field of view.</p>
+
+  <h3>Accessibility</h3>
+  <p>The accessibility settings include options that reduce flashing and intense visual effects. Turn them on if you are sensitive to that kind of stimulus.</p>
+</div>
+
+<hr>
+
+<!-- ================= CONTACT ================= -->
+<h2 id="contact">
+  <span data-lang="pl">Kontakt</span>
+  <span data-lang="en">Contact</span>
+</h2>
+
+<div class="card">
+  <p>
+    <span data-var="dev"></span><br>
+    <a data-var="mailto" href="#"><span data-var="email"></span></a>
+  </p>
+  <p class="muted">
+    <span data-lang="pl">W sprawach dotyczących danych osobowych napisz na powyższy adres i podaj swój SteamID.</span>
+    <span data-lang="en">For any data protection request, email the address above and include your SteamID.</span>
+  </p>
+</div>
+
+</div>
+
+<script>
+// tu wpisujesz swoje dane i to wszystko, reszta strony sama sie uzupelni
+const CONFIG = {
+  game: "Nazwa Gry",
+  dev: "Nazwa Studia / Twoje imię i nazwisko",
+  email: "kontakt@twojadomena.pl",
+  analytics: "Unity Analytics",
+  date: "2026-09-05"
+};
+
+for (const el of document.querySelectorAll("[data-var]")) {
+  const key = el.dataset.var;
+  if (key === "mailto") el.href = "mailto:" + CONFIG.email;
+  else if (CONFIG[key] !== undefined) el.textContent = CONFIG[key];
+}
+
+const buttons = document.querySelectorAll(".langs button");
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  for (const el of document.querySelectorAll("[data-lang]")) {
+    el.classList.toggle("on", el.dataset.lang === lang);
+  }
+  for (const b of buttons) {
+    b.setAttribute("aria-pressed", String(b.dataset.set === lang));
+  }
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+
+for (const b of buttons) {
+  b.addEventListener("click", () => setLang(b.dataset.set));
+}
+
+let start = "pl";
+try {
+  const saved = localStorage.getItem("lang");
+  if (saved === "pl" || saved === "en") start = saved;
+  else if (!navigator.language.toLowerCase().startsWith("pl")) start = "en";
+} catch (e) {
+  if (!navigator.language.toLowerCase().startsWith("pl")) start = "en";
+}
+// ?lang=en w adresie wymusza jezyk, przydatne do linkow ze Steama
+const q = new URLSearchParams(location.search).get("lang");
+if (q === "pl" || q === "en") start = q;
+
+setLang(start);
+</script>
+</body>
+</html>
