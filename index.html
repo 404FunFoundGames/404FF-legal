@@ -292,11 +292,10 @@ span[data-lang].on{display:inline}
 </div>
 
 <script>
-// tu wpisujesz swoje dane i to wszystko, reszta strony sama sie uzupelni
 const CONFIG = {
-  game: "Nazwa Gry",
-  dev: "Nazwa Studia / Twoje imię i nazwisko",
-  email: "kontakt@twojadomena.pl",
+  game: "ScriptReader",
+  dev: "Ditru/Oskar Domagała",
+  email: "404FunFoundGames@gmail.com",
   analytics: "Unity Analytics",
   date: "2026-09-05"
 };
@@ -332,7 +331,6 @@ try {
 } catch (e) {
   if (!navigator.language.toLowerCase().startsWith("pl")) start = "en";
 }
-// ?lang=en w adresie wymusza jezyk, przydatne do linkow ze Steama
 const q = new URLSearchParams(location.search).get("lang");
 if (q === "pl" || q === "en") start = q;
 
