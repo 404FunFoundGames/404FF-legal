@@ -1,0 +1,130 @@
+.scriptreader-page {
+  color-scheme: dark;
+  --page: #101010;
+  --card: #191919;
+  --ink: #f0f0f0;
+  --muted: #b8b8b8;
+  --line: #414141;
+  --nav: #0b0b0b;
+  --nav-text: #d2d2d2;
+  --link: #e2e2e2;
+  --accent: #e8e8e8;
+  --outline: #fff;
+  --warn-bg: #222;
+  --warn-ink: #f0f0f0;
+  --warn-border: #858585;
+  --mono: "Cascadia Code", "Lucida Console", Consolas, ui-monospace, monospace;
+}
+
+.scriptreader-page .site-header {
+  color: var(--ink);
+  border-color: #414141;
+}
+
+.scriptreader-page .brand,
+.scriptreader-page .site-nav,
+.scriptreader-page .language-switch,
+.scriptreader-page .kicker,
+.scriptreader-page .back-link,
+.scriptreader-page .revision,
+.scriptreader-page h1,
+.scriptreader-page h2,
+.scriptreader-page h3,
+.scriptreader-page .side-nav p {
+  font-family: var(--mono);
+}
+
+.scriptreader-page .brand { color: #f1f1f1; }
+.scriptreader-page .brand span { color: #b6b6b6; }
+.scriptreader-page .language-switch { border-color: #5a5a5a; border-radius: 2px; }
+.scriptreader-page .language-switch button { border-radius: 0; }
+.scriptreader-page .language-switch button[aria-pressed="true"] { color: #121212; }
+.scriptreader-page .language-switch button:hover:not([aria-pressed="true"]) { background: #292929; }
+
+.scriptreader-page .legal-hero {
+  isolation: isolate;
+  color: #f5f5f5;
+  border-bottom: 1px solid #535353;
+  background:
+    repeating-linear-gradient(0deg, #0003 0 1px, transparent 1px 4px),
+    linear-gradient(110deg, #0c0c0c, #222 78%, #171717);
+}
+
+.scriptreader-page .legal-hero-content { position: relative; z-index: 1; padding-block: 1.65rem 2.75rem; }
+
+.scriptreader-page .legal-hero h1 {
+  margin-bottom: .7rem;
+  font-size: clamp(2.25rem, 6.5vw, 4.45rem);
+  font-weight: 700;
+  letter-spacing: -.065em;
+}
+
+.scriptreader-page .back-link,
+.scriptreader-page .hero-description { color: #d9d9d9; }
+.scriptreader-page .kicker { color: #bdbdbd; }
+.scriptreader-page .revision { color: #b8b8b8; font-size: .83rem; }
+
+@media (min-width: 52rem) {
+  .scriptreader-page .legal-hero::after {
+    content: "";
+    position: absolute;
+    inset: 15% max(1.5rem, calc((100% - var(--measure)) / 2)) 15% auto;
+    width: min(29vw, 21rem);
+    border: 1px solid #565656;
+    background:
+      linear-gradient(90deg, transparent 49.8%, #747474 49.8% 50.2%, transparent 50.2%),
+      linear-gradient(transparent 49.6%, #747474 49.6% 50.4%, transparent 50.4%),
+      repeating-linear-gradient(90deg, #50505066 0 1px, transparent 1px 24px),
+      repeating-linear-gradient(0deg, #50505066 0 1px, transparent 1px 24px),
+      radial-gradient(ellipse at center, #3a3a3a, #171717 78%);
+    box-shadow: inset 0 0 2.1rem #0b0b0b, 5px 5px #090909aa;
+    pointer-events: none;
+  }
+
+  .scriptreader-page .legal-hero-content { padding-right: calc(min(29vw, 21rem) + 1.4rem); }
+}
+
+.scriptreader-page .side-nav nav,
+.scriptreader-page .legal-section,
+.scriptreader-page .draft-note,
+.scriptreader-page .warn { border-radius: 0; }
+
+.scriptreader-page .legal-section,
+.scriptreader-page .side-nav nav { box-shadow: inset 0 1px #303030; }
+
+.scriptreader-page .side-nav a:hover { color: #fff; }
+.scriptreader-page .side-nav p { letter-spacing: .07em; }
+
+.scriptreader-page .draft-note {
+  color: var(--ink);
+  border-color: #626262;
+  border-left: 3px solid #9d9d9d;
+  background: #242424;
+}
+
+.scriptreader-page .warn { border-left-color: #c5c5c5; }
+.scriptreader-page th { background: #282828; color: var(--ink); }
+.scriptreader-page .site-footer { background: #141414; }
+.scriptreader-page .legal-content a { overflow-wrap: anywhere; }
+
+@media print {
+  .scriptreader-page {
+    color-scheme: light;
+    --page: #fff;
+    --card: #fff;
+    --ink: #000;
+    --muted: #333;
+    --link: #111;
+    --line: #b0b0b0;
+    --warn-bg: #fff;
+    --warn-ink: #000;
+  }
+
+  .scriptreader-page .legal-hero { background: #fff; color: #000; }
+  .scriptreader-page .legal-hero::after { display: none; }
+  .scriptreader-page .legal-hero-content { padding-right: 0; }
+  .scriptreader-page .legal-hero p { color: #222; }
+  .scriptreader-page .draft-note,
+  .scriptreader-page th { background: #f2f2f2; }
+  .scriptreader-page .legal-section { box-shadow: none; }
+}
